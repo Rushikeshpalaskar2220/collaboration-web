@@ -1,0 +1,51 @@
+/* src/Components/Cards.css */
+
+.employee-card {
+  background-color: #ffffff; /* White background for a clean look */
+  border: 1px solid #e0e0e0; /* Light grey border */
+  border-radius: 12px; /* Slightly more rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 20px;
+  margin: 20px;
+  width: 100%;
+  max-width: 350px; /* Maximum width for larger screens */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition for transform, shadow, and background-color */
+}
+
+.employee-card:hover {
+   transform: translateY(-10px) scale(1.05);  
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+  background-color: #f0f8ff; /* Light blue background on hover */
+}
+
+.card-body {
+  text-align: left;
+}
+
+.card-body p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #333; /* Dark grey text for readability */
+}
+
+.card-body p strong {
+  color: #007bff; /* Highlight labels with primary theme color */
+}
+
+@media screen and (max-width: 768px) {
+  .employee-card {
+    max-width: 90%; /* Adjust max width for smaller screens */
+    margin: 10px auto; /* Center the cards */
+    transform: none; 
+   
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .employee-card {
+    max-width: 100%; /* Adjust max width for smaller screens */
+    margin: 10px auto; /* Center the cards */
+    
+  }
+}

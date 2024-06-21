@@ -1,0 +1,95 @@
+.contact-form-container {
+    max-width: 600px;
+    margin: 80px auto 50px auto; /* Increased top margin for more space */
+    padding: 30px;
+    background-color: #e9f7ef; /* Light green background for a different look */
+    border: 1px solid #28a745; /* Green border */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+    text-align: center;
+  }
+  
+  .contact-form-container h2 {
+    margin-bottom: 20px;
+    color: #28a745; /* Green color */
+    font-size: 1.5rem; /* Increased font size */
+    font-weight: bold; /* Bold font */
+  }
+  
+  .contact-form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 20px; /* Increased spacing between form groups */
+    position: relative; /* Position relative for pseudo-element */
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px 10px;
+    border: none;
+    border-bottom: 2px solid #ccc; /* Bottom border for inputs */
+    background-color: transparent; /* Transparent background */
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for border color and shadow */
+    outline: none; /* Remove default outline */
+  }
+  
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: #666; /* Grey placeholder text */
+    font-style: italic; /* Italic placeholder text */
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-bottom-color: #28a745; /* Highlight bottom border color on focus */
+    box-shadow: 0 2px 0 rgba(40, 167, 69, 0.5); /* Add a green shadow on focus */
+  }
+  
+  .submit-button {
+    padding: 12px 20px;
+    background-color: #28a745; /* Green color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px; /* Slightly rounded corners for button */
+    cursor: pointer;
+    font-size: 1.1rem; /* Slightly larger font size */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and transform */
+  }
+  
+  .submit-button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .contact-form-container {
+      width: 90%;
+      margin: 20px auto; /* Adjust the margin for smaller screens */
+      padding: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .contact-form-container {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    .contact-form-container h2 {
+      font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+  
+    .form-group input,
+    .form-group textarea {
+      font-size: 0.9rem; /* Adjust input font size for smaller screens */
+    }
+  
+    .submit-button {
+      font-size: 1rem; /* Adjust button font size for smaller screens */
+    }
+  }

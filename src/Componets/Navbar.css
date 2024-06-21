@@ -1,0 +1,250 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #343a40; /* Dark gray */
+  padding: 0 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo-img {
+  max-width: 100px;
+  height: auto;
+}
+
+.login-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Bootstrap primary blue */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-right: 10px;
+}
+
+.login-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  color: white;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 10px 15px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white; /* White text */
+  transition: color 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: #007bff; /* Primary blue on hover */
+}
+
+#navbar li a:hover::after,
+#navbar li a.active::after {
+  content: "";
+  width: 60%;
+  height: 2px;
+  background: #007bff; /* Primary blue */
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+#mobile {
+  display: none;
+}
+
+#mobile i {
+  color: white; /* White icon */
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+#mobile i:hover {
+  color: #007bff; /* Primary blue on hover */
+}
+
+@media screen and (max-width: 769px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background: #343a40; /* Dark gray */
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 40px 0 0 10px;
+    transition: right 0.4s ease-in-out;
+    /* z-index: -1; */
+  }
+
+  #navbar.active {
+    right: 0;
+  }
+
+  #navbar li {
+    margin-bottom: 25px;
+  }
+
+  #mobile {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+
+  #mobile i {
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333333;
+}
+
+.form-container .social-login {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.login-with-google-button,
+.login-with-linkedin-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  color: #333333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-with-google-button img,
+.login-with-linkedin-button img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.login-with-google-button:hover,
+.login-with-linkedin-button:hover {
+  background-color: #f2f2f2;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container input {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-container button {
+  padding: 12px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+}
+
+.form-aux {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.forgot-password {
+  font-size: 0.9rem;
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.forgot-password:hover {
+  color: #0056b3;
+}
+
+.not-registered {
+  display: block;
+  margin-top: 15px;
+  text-align: left;
+}
+
+.register-link {
+  background: none;
+  color: #9a6666;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 0.9rem;
+}
+
+.register-link:hover {
+  color: #0056b3;
+}
+
+@media screen and (max-width: 480px) {
+  .form-container {
+    width: 90%;
+    margin: 50px auto;
+  }
+}
+
+#AddPostForm, #contacts {
+  margin-top: 50px;
+}

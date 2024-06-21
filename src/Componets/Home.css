@@ -1,0 +1,63 @@
+/* src/Components/Home.css */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1e1d1d; /* Light grey background */
+  text-align: center;
+  color: #333; /* Dark grey text */
+  padding: 20px;
+}
+
+.home-container h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #007bff; /* Primary blue color */
+}
+
+.home-container p {
+  font-size: 1.5rem;
+  color: #555; /* Slightly lighter grey */
+}
+
+.employee-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .home-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-container p {
+    font-size: 1.2rem;
+  }
+
+  .employee-cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home-container h1 {
+    font-size: 2rem;
+  }
+
+  .home-container p {
+    font-size: 1rem;
+  }
+
+  .employee-cards-container {
+    padding: 10px;
+  }
+}
